@@ -52,7 +52,7 @@ class SyntaxDB {
   // QUERY PARAMETERS
 
   // limit the number of results
-  limitTo(limit) {
+  limit(limit) {
     this.addParam(`limit=${limit}`)
     return this
   }

@@ -3,7 +3,7 @@ const conn = require('./syntaxdb.js')
 
 // query the database
 conn.categories('python')
-  .limitTo(2)
+  .limit(2)
   .sort('id', true)
   .query()
   .then( data => {
