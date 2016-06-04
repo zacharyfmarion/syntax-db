@@ -1,0 +1,14 @@
+{
+  "name": "syntax-db",
+  "version": "1.0.0",
+  "description": "A small module to query the SyntaxDB database (https://syntaxdb.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zachary Marion",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
