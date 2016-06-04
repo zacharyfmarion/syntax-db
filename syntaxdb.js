@@ -1,6 +1,6 @@
 const request = require('request') 
 
-module.exports = class SyntaxDB {
+class SyntaxDB {
   constructor()	{
     this.base = 'https://syntaxdb.com/api/v1/'	
     this.url = this.base
@@ -91,3 +91,6 @@ module.exports = class SyntaxDB {
   }
 
 }
+
+// export the object
+module.exports = new SyntaxDB()

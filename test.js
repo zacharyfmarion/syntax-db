@@ -1,8 +1,6 @@
 //require the library
-const queryDB = require('./queryDB.js')
+const conn = require('./syntaxdb.js')
 
-// create a new connection to the database (not really)
-let conn = new queryDB()
 // query the database
 conn.categories('python')
   .limitTo(2)
