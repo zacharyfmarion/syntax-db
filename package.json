@@ -1,6 +1,6 @@
 {
   "name": "syntax-db",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small module to query the SyntaxDB database (https://syntaxdb.com/)",
   "main": "syntaxdb.js",
   "scripts": {
