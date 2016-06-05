@@ -33,8 +33,6 @@ class SyntaxDB {
       return this.resetUrl(`languages/${lang}/categories/${category_id}/concepts`) 
     }else if(lang && !category_id){ 
       return this.resetUrl(`languages/${lang}/concepts`)
-    }else if (!lang && category_id){
-      throw new Error("You must have a language if you provide a category id")
     }else{
       return this.resetUrl(`concepts`)
     }
