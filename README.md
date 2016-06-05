@@ -1,5 +1,7 @@
 ## SyntaxDB
 
+[![Build Status](https://travis-ci.org/zacharyfmarion/syntax-db.svg?branch=master)](https://travis-ci.org/zacharyfmarion/syntax-db)
+
 This is a small wrapper module for the syntax-db REST API. You can query the site through a series of chainable commands similar to jquery:
 
 ```javascript
