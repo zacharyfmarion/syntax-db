@@ -1,4 +1,5 @@
-const request = require('request') 
+const Client = require('node-rest-client').Client;
+const client = new Client()
 
 class SyntaxDB {
   constructor()	{
@@ -14,10 +15,13 @@ class SyntaxDB {
   query() {
     let _this = this
     return new Promise((resolve, reject) => {
-      request(_this.url, (err, res, body) => {
-        if (err) reject(err)
-        resolve(JSON.parse(body))
-      }) 
+      client.get(_this.url, (data, res) => {
+        resolve(data) 
+      }).on('error', err => { reject(err) })
+      //request(_this.url, (err, res, body) => {
+        //if (err) reject(err)
+        //resolve(JSON.parse(body))
+      //}) 
     })
   }
 

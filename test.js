@@ -1,15 +1,14 @@
 //require the library
-const conn = require('./syntaxdb.js'), request = require('request')
+const conn = require('./syntaxdb.js'), Client = require('node-rest-client').Client, client = new Client()
 // import ava (yay es6)
 import test from 'ava'
 
 // function to help generate test data
 function promiseQuery(query) {
   return new Promise((resolve, reject) => {
-    request(query, (err, res, body) => {
-      if (err) reject(err)
-      resolve(JSON.parse(body))
-    })
+    client.get(query, (body, res) => {
+      resolve(body) 
+    }).on('error', err => { throw err })
   })
 }
 
